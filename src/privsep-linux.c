@@ -57,7 +57,7 @@
  * the failing syscall into the __NR_name define we need to use below.
  * DO NOT ENABLE THIS FOR PRODUCTION BUILDS!
  */
-//#define SECCOMP_FILTER_DEBUG
+#define SECCOMP_FILTER_DEBUG
 
 static ssize_t
 ps_root_dosendnetlink(int protocol, struct msghdr *msg)
