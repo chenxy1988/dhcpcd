@@ -405,6 +405,9 @@ static struct sock_filter ps_seccomp_filter[] = {
 #ifdef __NR_uname
 	SECCOMP_ALLOW(__NR_uname),
 #endif
+#ifdef __NR_readlinkat
+	SECCOMP_ALLOW(__NR_readlinkat),
+#endif
 
 	/* Deny everything else */
 	BPF_STMT(BPF_RET + BPF_K, SECCOMP_FILTER_FAIL),
